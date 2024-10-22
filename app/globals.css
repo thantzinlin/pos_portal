@@ -1,0 +1,224 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * {
+  transition: all 0.3s;
+} */
+:root {
+  --primary-color: rgb(243 244 246);
+  --secondary-color: rgb(255, 255, 255);
+  --third-color: rgb(30, 7, 95);
+  --fourth-color: rgb(170, 136, 245);
+  --five-color: rgb(242, 237, 254);
+  --buttom-color: rgb(130, 78, 240);
+}
+
+body {
+  height: 100vh;
+  /* font-family: "Poppins" !important; */
+  font-family: "Nunito", sans-serif !important;
+  font-size: 12px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+/* styles.css or your CSS file */
+.my-swal-button {
+  background-color: #3b82f6 !important; /* Change to your desired color */
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  /* font-size: 16px; */
+  transition: background-color 0.3s;
+}
+
+.my-swal-button:hover {
+  background-color: #e64d29; /* Slightly darker shade for hover */
+}
+
+.sidebar-icon {
+  @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto  text-gray-400 hover:bg-gray-700 hover:text-white rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer;
+}
+.sidebar-div {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4rem;
+}
+.sidebar-tooltip {
+  @apply absolute w-auto p-2 m-2 min-w-max left-14 bottom-0 text-sm font-bold bg-black text-white rounded-md scale-0;
+  transition: transform 0.3s ease-in-out;
+  group-hover: scale-100;
+}
+@keyframes slideIn {
+  from {
+    right: -24rem; /* Off-screen initially */
+  }
+  to {
+    right: 0; /* Slide in to the right */
+  }
+}
+
+@keyframes slideOut {
+  from {
+    right: 0; /* Initial position on-screen */
+  }
+  to {
+    right: -24rem; /* Slide out to the right */
+  }
+}
+.sidebar {
+  background-color: var(--third-color);
+}
+
+body::-webkit-scrollbar {
+  width: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #696969;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #696969;
+}
+
+.focus:focus {
+  border-color: #7468d4;
+  outline: none;
+}
+.navbar {
+  border-bottom: 2px solid rgb(228, 228, 228);
+  background-color: var(--secondary-color);
+}
+.suggestion-list li.selected {
+  background-color: var(--primary-color);
+}
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 0;
+    size: auto;
+  }
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .hidden-print {
+    display: none;
+  }
+
+  .print-only {
+    display: block;
+  }
+
+  .print-receipt {
+    font-size: 12pt;
+  }
+}
+
+.receipt-container {
+  width: auto; /* or a specific width that fits the print paper */
+  padding: 10mm; /* or as much as needed */
+  /* width: 100vw; */
+  font-family: "Nunito", sans-serif !important;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 10px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+  padding-top: 0;
+  /* border: 1px solid #000; */
+}
+
+.receipt-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.receipt-info,
+.receipt-items,
+.receipt-total {
+  border-top: 1px dashed #000;
+  padding: 10px 0;
+}
+
+.receipt-info p,
+.receipt-items p,
+.receipt-total p {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p.receipt-time {
+  display: flex;
+  justify-content: center;
+}
+
+.receipt-total {
+  font-weight: bold;
+}
+.sidebar-icon {
+  min-height: 3rem;
+  height: auto;
+}
+.close-sidebar {
+  box-shadow: 0 0 2px 2px var(--secondary-color);
+  background-color: var(--fourth-color);
+  border-radius: 8px;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.view-history {
+  background-color: var(--buttom-color);
+}
+.view-history:hover {
+  background-color: var(--fourth-color);
+}
+.back-key {
+  background-color: rgb(243 244 246);
+}
+.back-key:hover {
+  background-color: var(--secondary-color);
+}
+.card {
+  transition: all 0.3s;
+  min-width: 50px;
+  text-align: center;
+  height: 40px;
+  /* padding: 10px; */
+  /* align-items: center; */
+  padding: 10px;
+  background: var(--secondary-color);
+  border-radius: 16px;
+  border: 1px solid #c4c4c4;
+}
+
+.drawer-side
+{
+  margin-left: 4.01rem;
+  width: auto !important;
+}
+
